@@ -8,13 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using AutoFacUtils;
+using AutoFacDemo.IService;
+
 namespace AutoFacDemo.WinForm
 {
     public partial class Form1 : Form
     {
+        private IMyService MyService { get { return AutoFacHelper.Get<IMyService>(); } }
+
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MyService.MyService1();
         }
     }
 }

@@ -32,11 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Leon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -80,10 +82,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoFacDemo.IRepository\AutoFacDemo.IRepository.csproj">
-      <Project>{59283ef7-46c8-434e-8e33-056066ac94f5}</Project>
-      <Name>AutoFacDemo.IRepository</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AutoFacDemo.IService\AutoFacDemo.IService.csproj">
       <Project>{f39ef5a5-1932-468a-8b80-e0e8db4517c9}</Project>
       <Name>AutoFacDemo.IService</Name>
@@ -96,10 +94,17 @@
       <Project>{3db44dba-b890-40af-92cf-a69edd03813b}</Project>
       <Name>AutoFacDemo.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AutoFacUtils\AutoFacUtils.csproj">
+      <Project>{1b3887de-52b3-4950-a5e4-38a1a0c33a0b}</Project>
+      <Name>AutoFacUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{21aeecdb-3f06-4e66-9322-ac796148a0d2}</Project>
       <Name>Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Leon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

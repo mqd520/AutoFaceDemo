@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFacDemo.IService", "Aut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFacDemo.Service", "AutoFacDemo.Service\AutoFacDemo.Service.csproj", "{3DB44DBA-B890-40AF-92CF-A69EDD03813B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFacUtils", "AutoFacUtils\AutoFacUtils.csproj", "{1B3887DE-52B3-4950-A5E4-38A1A0C33A0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{3DB44DBA-B890-40AF-92CF-A69EDD03813B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DB44DBA-B890-40AF-92CF-A69EDD03813B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DB44DBA-B890-40AF-92CF-A69EDD03813B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B3887DE-52B3-4950-A5E4-38A1A0C33A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3887DE-52B3-4950-A5E4-38A1A0C33A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3887DE-52B3-4950-A5E4-38A1A0C33A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3887DE-52B3-4950-A5E4-38A1A0C33A0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +77,6 @@ Global
 		{35F3D1B7-4CC8-4EA9-AE37-040F50DB31E8} = {36FBF604-09B8-4488-95E2-12DD2F2DAACE}
 		{F39EF5A5-1932-468A-8B80-E0E8DB4517C9} = {417C585F-D8DF-4927-A9E5-8FEA4C9C4DAB}
 		{3DB44DBA-B890-40AF-92CF-A69EDD03813B} = {417C585F-D8DF-4927-A9E5-8FEA4C9C4DAB}
+		{1B3887DE-52B3-4950-A5E4-38A1A0C33A0B} = {64CECDDD-9EC2-4DD5-99DC-1D62A394908B}
 	EndGlobalSection
 EndGlobal

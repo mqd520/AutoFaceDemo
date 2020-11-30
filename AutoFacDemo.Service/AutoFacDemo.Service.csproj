@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -47,9 +48,17 @@
       <Project>{59283ef7-46c8-434e-8e33-056066ac94f5}</Project>
       <Name>AutoFacDemo.IRepository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AutoFacDemo.IService\AutoFacDemo.IService.csproj">
+      <Project>{f39ef5a5-1932-468a-8b80-e0e8db4517c9}</Project>
+      <Name>AutoFacDemo.IService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AutoFacDemo.Repository\AutoFacDemo.Repository.csproj">
       <Project>{35f3d1b7-4cc8-4ea9-ae37-040f50db31e8}</Project>
       <Name>AutoFacDemo.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutoFacUtils\AutoFacUtils.csproj">
+      <Project>{1b3887de-52b3-4950-a5e4-38a1a0c33a0b}</Project>
+      <Name>AutoFacUtils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
