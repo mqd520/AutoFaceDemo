@@ -13,6 +13,7 @@ namespace AutoFacDemo.Repository
         public void MyRepository1()
         {
             System.Diagnostics.Debug.WriteLine("MyRepository.MyRepository1");
+            Console.WriteLine("MyRepository.MyRepository1");
         }
     }
 }

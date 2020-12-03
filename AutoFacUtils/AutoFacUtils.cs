@@ -11,12 +11,15 @@ namespace AutoFacUtils
 {
     public class AutoFacHelper
     {
+        /// <summary>
+        /// Container
+        /// </summary>
         public static IContainer Container { get; private set; }
 
 
         static AutoFacHelper()
         {
-
+            
         }
 
         /// <summary>

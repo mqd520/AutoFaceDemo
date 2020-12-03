@@ -18,6 +18,7 @@ namespace AutoFacDemo.Service
         public void MyService1()
         {
             System.Diagnostics.Debug.WriteLine("MyService.MyService1");
+            Console.WriteLine("MyService.MyService1");
 
             MyRepository.MyRepository1();
         }
