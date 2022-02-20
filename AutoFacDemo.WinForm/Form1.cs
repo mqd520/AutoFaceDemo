@@ -15,7 +15,7 @@ namespace AutoFacDemo.WinForm
 {
     public partial class Form1 : Form
     {
-        private IMyService MyService { get { return AutoFacHelper.Get<IMyService>(); } }
+        private IUserService MyService { get { return AutoFacHelper.Resolve<IUserService>(); } }
 
 
         public Form1()
@@ -30,7 +30,7 @@ namespace AutoFacDemo.WinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MyService.MyService1();
+            //MyService.MyService1();
         }
     }
 }

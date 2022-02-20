@@ -9,8 +9,13 @@ using Autofac;
 
 namespace AutoFacUtils
 {
+    /// <summary>
+    /// Autofac Helper
+    /// </summary>
     public class AutoFacHelper
     {
+        public static ContainerBuilder Builder { get; private set; }
+
         /// <summary>
         /// Container
         /// </summary>
@@ -19,37 +24,52 @@ namespace AutoFacUtils
 
         static AutoFacHelper()
         {
-            
+
+        }
+
+        public static void Init()
+        {
+            Builder = new ContainerBuilder();
+        }
+
+        public static void Build()
+        {
+            Container = Builder.Build();
         }
 
         /// <summary>
         /// Init
         /// </summary>
-        public static void Init(IList<string> lsAssembly)
+        public static void LoadAssembly(IList<string> lsAssembly)
         {
-            var builder = new ContainerBuilder();
-
-            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
-                   .AsImplementedInterfaces().AsSelf();
-
             foreach (var item in lsAssembly)
             {
-                Assembly assem1 = Assembly.Load(item);
-                builder.RegisterAssemblyTypes(assem1)
-                       .AsImplementedInterfaces().AsSelf();
+                Assembly asm = Assembly.Load(item);
+                Builder.RegisterAssemblyTypes(asm).AsImplementedInterfaces().AsSelf();
             }
+        }
 
-            Container = builder.Build();
+        public static void LoadAssembly(IList<Assembly> lsAssembly)
+        {
+            foreach (var item in lsAssembly)
+            {
+                Builder.RegisterAssemblyTypes(item).AsImplementedInterfaces().AsSelf();
+            }
         }
 
         /// <summary>
-        /// Get
+        /// Resolve
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T Get<T>()
+        public static T Resolve<T>()
         {
             return Container.Resolve<T>();
+        }
+
+        public static T ResolveNamed<T>(string serviceName)
+        {
+            return Container.ResolveNamed<T>(serviceName);
         }
     }
 }

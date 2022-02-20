@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoFacDemo.IRepository
+namespace AutoFacDemo.IService
 {
-    public interface IMyRepository
+    public interface IUserService
     {
-        void MyRepository1();
+        bool IsLogin();
     }
 }

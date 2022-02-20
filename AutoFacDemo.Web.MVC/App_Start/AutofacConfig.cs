@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Autofac.Integration.Mvc;
 
 using AutoFacUtils;
+using Autofac;
 
 namespace AutoFacDemo.Web.MVC.App_Start
 {
@@ -15,7 +16,15 @@ namespace AutoFacDemo.Web.MVC.App_Start
     {
         public static void Register()
         {
-            AutoFacHelper.Init(new string[] { "AutoFacDemo.IService", "AutoFacDemo.Service", "AutoFacDemo.IRepository", "AutoFacDemo.Repository" });
+            AutoFacHelper.Init();
+            AutoFacHelper.LoadAssembly(new string[] {
+                "AutoFacDemo.IService",
+                "AutoFacDemo.Service",
+                "AutoFacDemo.IRepository",
+                "AutoFacDemo.Repository"
+            });
+
+            AutoFacHelper.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(AutoFacHelper.Container));
         }
     }

@@ -16,7 +16,7 @@ namespace AutoFacDemo.WinForm
         [STAThread]
         static void Main()
         {
-            AutoFacHelper.Init(new string[] { "AutoFacDemo.IService", "AutoFacDemo.Service", "AutoFacDemo.IRepository", "AutoFacDemo.Repository" });
+            AutoFacHelper.LoadAssembly(new string[] { "AutoFacDemo.IService", "AutoFacDemo.Service", "AutoFacDemo.IRepository", "AutoFacDemo.Repository" });
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

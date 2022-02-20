@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoFacDemo.IService
+namespace AutoFacDemo.IRepository
 {
-    public interface IMyService
+    public interface IUserRepository
     {
-        void MyService1();
+        IEnumerable<string> QueryAll();
     }
 }

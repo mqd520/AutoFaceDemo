@@ -12,9 +12,13 @@ namespace AutoFacDemo.Web.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private IMyRepository MyRepository { get { return AutoFacHelper.Get<IMyRepository>(); } }
+        private IUserRepository UserRepository { get { return AutoFacHelper.Resolve<IUserRepository>(); } }
 
-        private IMyService MyService { get { return AutoFacHelper.Get<IMyService>(); } }
+        private IUserService UserService { get { return AutoFacHelper.Resolve<IUserService>(); } }
+
+        public IUserRepository UserRepository2 { get; set; }
+
+        public IUserService UserService2 { get; set; }
 
 
         public HomeController()
@@ -24,8 +28,8 @@ namespace AutoFacDemo.Web.MVC.Controllers
 
         public ActionResult Index()
         {
-            MyRepository.MyRepository1();
-            MyService.MyService1();
+            var ls = UserRepository.QueryAll();
+            var flag = UserService.IsLogin();
 
             return View();
         }

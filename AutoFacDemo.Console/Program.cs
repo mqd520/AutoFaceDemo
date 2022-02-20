@@ -11,12 +11,12 @@ namespace AutoFacDemo.Console
 {
     class Program
     {
-        private static IMyService MyService { get { return AutoFacHelper.Get<IMyService>(); } }
+        private static IUserService MyService { get { return AutoFacHelper.Resolve<IUserService>(); } }
 
 
         static void Main(string[] args)
         {
-            AutoFacHelper.Init(new string[] { "AutoFacDemo.IService", "AutoFacDemo.Service", "AutoFacDemo.IRepository", "AutoFacDemo.Repository" });
+            AutoFacHelper.LoadAssembly(new string[] { "AutoFacDemo.IService", "AutoFacDemo.Service", "AutoFacDemo.IRepository", "AutoFacDemo.Repository" });
 
 
             while (true)
@@ -30,7 +30,7 @@ namespace AutoFacDemo.Console
                 {
                     if (line.Equals("MyService1"))
                     {
-                        MyService.MyService1();
+                        //MyService.MyService1();
                     }
                 }
             }
